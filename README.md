@@ -1,6 +1,6 @@
 # BLD Agregator
 
-Agragate more blocklists to one blocklist from different sources.
+Aggregate more blacklists to one blacklist from different sources, see `config.cfg`
 
 # Credits
 
