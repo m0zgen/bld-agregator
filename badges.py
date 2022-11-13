@@ -22,3 +22,15 @@ b2 = badge(left_text='Aggregated hosts',
            
 with open("badge_total.svg", "w") as f:
     f.write(b2)
+
+# create badge wl the number of hosts
+with open("allowlist.txt", "r") as f:
+    data = f.read()
+wldomains = data.splitlines()
+
+a1 = badge(left_text='Aggregated hosts',
+           right_text="%s" % len(wldomains),
+           right_color='green')
+
+with open("badge_total_allow.svg", "w") as f:
+    f.write(a1)
