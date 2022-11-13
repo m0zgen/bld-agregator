@@ -1,6 +1,12 @@
+# OS
 .idea
 .DS_Store
 
+# Downloaded blocking
 blocklist.cdb
 blocklist.txt
 hosts.txt
+
+# Downloaded allowing
+allowlist.txt
+allowlist.cdb
