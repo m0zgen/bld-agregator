@@ -1,4 +1,5 @@
 import blocklist_aggregator
+from pathlib import Path
 
 allow_yaml = """
 verbose: true
@@ -18,6 +19,21 @@ sources:
     pattern: ^(\/.*\/)$
 """
 
+
+def sort_file(path):
+    file = Path(path)
+    file.write_text(
+        "\n".join(
+            sorted(
+                file.read_text().split("\n")
+            )
+        )
+    )
+    with open(path, 'r') as original: data = original.read()
+    with open(path, 'w') as modified: modified.write("# BLD Agregator sorted file" + data)
+
+
 unified = blocklist_aggregator.fetch(cfg_update=allow_yaml)
 blocklist_aggregator.save_raw(filename="../allowlist.txt", cfg_update=allow_yaml)
 blocklist_aggregator.save_cdb(filename="../allowlist.cdb", cfg_update=allow_yaml)
+sort_file("../allowlist.txt")
