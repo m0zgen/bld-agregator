@@ -16,7 +16,7 @@ with open("blocklist.txt", "r") as f:
     data = f.read()
 domains = data.splitlines()
 
-b2 = badge(left_text='Aggregated hosts', 
+b2 = badge(left_text='Blocklisted hosts count',
            right_text="%s" % len(domains),
            right_color='red')
            
@@ -28,7 +28,7 @@ with open("allowlist.txt", "r") as f:
     data = f.read()
 wldomains = data.splitlines()
 
-a1 = badge(left_text='Aggregated hosts',
+a1 = badge(left_text='Whitelisted hosts count',
            right_text="%s" % len(wldomains),
            right_color='green')
 
