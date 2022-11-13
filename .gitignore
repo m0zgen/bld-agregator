@@ -1,3 +1,6 @@
+.idea
+.DS_Store
+
 blocklist.cdb
 blocklist.txt
 hosts.txt
