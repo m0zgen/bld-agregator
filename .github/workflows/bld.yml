@@ -21,7 +21,7 @@ jobs:
         
     - name: Install dependencies
       run: |
-        sudo python3 -m pip install blocklist_aggregator pybadges
+        sudo python3 -m pip install blocklist_aggregator pybadges python-dotenv
         
     - name: Generate blocklists and badges
       run: |

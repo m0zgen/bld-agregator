@@ -1,10 +1,15 @@
 import blocklist_aggregator
+import os
 from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv()
+
+bl_config = os.getenv("SCRIPT_BL_CONFIG")
 
 ext_cfg = """
 """
 # unified = blocklist_aggregator.fetch(cfg_update=ext_cfg)
-unified = blocklist_aggregator.fetch(cfg_filename="blocking.yml")
+unified = blocklist_aggregator.fetch(cfg_filename=bl_config)
 
 # Functions
 # Sort txt files
