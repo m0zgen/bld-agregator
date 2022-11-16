@@ -1,6 +1,7 @@
 # OS
 .idea
 .DS_Store
+tmp
 
 # Downloaded blocking
 blocklist.cdb

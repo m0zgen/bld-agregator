@@ -4,12 +4,14 @@ from pathlib import Path
 from dotenv import load_dotenv
 load_dotenv()
 
-bl_config = os.getenv("SCRIPT_BL_CONFIG")
+conf = os.getenv("SCRIPT_BL_CONFIG")
+bl_list = os.getenv("BLOCK_LIST")
+wl_list = os.getenv("ALLOW_LIST")
 
 ext_cfg = """
 """
 # unified = blocklist_aggregator.fetch(cfg_update=ext_cfg)
-unified = blocklist_aggregator.fetch(cfg_filename=bl_config)
+unified = blocklist_aggregator.fetch(cfg_filename=conf)
 
 # Functions
 # Sort txt files
@@ -26,10 +28,10 @@ def sort_file(path):
     with open(path, 'w') as modified: modified.write("# BLD Agregator sorted file" + data)
 
 # Stage 1
-with open("whitelist.yml") as f:
+with open(wl_list) as f:
     ext_cfg += "\n" + f.read()
 
-with open("blacklist.yml") as f:
+with open(bl_list) as f:
     ext_cfg += "\n" + f.read()
 
 blocklist_aggregator.save_raw(filename="blocklist.txt", cfg_update=ext_cfg)
