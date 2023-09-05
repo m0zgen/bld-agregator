@@ -22,6 +22,7 @@ sources:
       - https://raw.githubusercontent.com/davidonzo/Threat-Intel/master/lists/latestdomains.piHole.txt
       - https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/hosts
       - https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt
+      - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/hosts/pro.txt
     pattern: (?:(?:0\.0\.0\.0)|(?:127\.0\.0\.1))\s+((?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9])
 
   - urls:

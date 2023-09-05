@@ -32,3 +32,4 @@ Allow lists sources:
 * https://wazuh.com/blog/using-osint-to-create-cdb-lists/
 * https://iplists.firehol.org
 * https://github.com/m0zgen/dns-hole
+* https://github.com/hagezi/dns-blocklists
