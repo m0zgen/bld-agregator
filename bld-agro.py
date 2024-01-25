@@ -50,12 +50,10 @@ sources:
       - https://raw.githubusercontent.com/m0zgen/dns-hole/master/vendors-wl/google.txt
       - https://raw.githubusercontent.com/m0zgen/dns-hole/master/vendors-wl/microsoft.txt
       - https://raw.githubusercontent.com/m0zgen/dns-hole/master/vendors-wl/yandex.txt
-      - https://raw.githubusercontent.com/m0zgen/dns-hole/master/regex/common-wl.txt
     pattern: ^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]$
 
 # "Export regex data
   - urls:
-      - https://raw.githubusercontent.com/m0zgen/dns-hole/master/vendors-wl/yandex.txt
       - https://raw.githubusercontent.com/m0zgen/dns-hole/master/regex/common-wl.txt
     pattern: ^(\/.*\/)$
 """
